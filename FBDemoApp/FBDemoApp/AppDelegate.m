@@ -32,6 +32,12 @@
     return YES;
 }
 
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [self.viewController.facebook handleOpenURL:url];
+}
+
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     /*

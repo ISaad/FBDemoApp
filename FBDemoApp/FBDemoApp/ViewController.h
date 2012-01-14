@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Facebook.h"
+#import "FriendsView.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <FBRequestDelegate, FBDialogDelegate, FBSessionDelegate>
+
+@property (readonly) Facebook *facebook;
+@property (nonatomic, retain) NSArray *permissions;
+@property (nonatomic, retain) FriendsView *friendsView;
+@property (nonatomic, retain) IBOutlet UILabel *lblAppName;
+@property (nonatomic, retain) IBOutlet UIButton *btnLogin;
+@property (nonatomic, retain) IBOutlet UIButton *btnShowFriends;
+@property (nonatomic, retain) IBOutlet UIButton *btnLogout;
+@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (nonatomic, retain) UINavigationController *navigationController;
+
 
 @end
